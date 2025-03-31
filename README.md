@@ -11,20 +11,6 @@
 
     🚀 Stay tuned! 🙂
 
-# Project\_ Guide ⚙️
 
-## **_`Project_Tree`_**
-
-/tas-signup
-
-.index.html
-
-.style.css
-
-.script.js
-
-./images/tas.gif
-
-.nojekyll
 
 # Go Team! 🙂 🚀
