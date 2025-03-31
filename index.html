@@ -4,10 +4,13 @@
     <script async src="https://tally.so/widgets/embed.js"></script>
 
     <script>
+      // Dynamically adjust popup dimensions based on screen size
+      const isMobile = window.innerWidth <= 768; // Check if the device is mobile
       window.TallyConfig = {
         formId: "3jz5AJ",
         popup: {
-          width: 360,
+          width: isMobile ? "90%" : "360px", // Adjust width for mobile and desktop
+          height: isMobile ? "80%" : "auto", // Adjust height for mobile
           emoji: {
             text: "👋",
             animation: "wave",
@@ -77,38 +80,13 @@
 
     <!-- Custom Styles -->
     <style>
-
-       #background-video {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -100;
-        transform: translateX(-50%) translateY(-50%);
-        object-fit: cover;
-      }
-
-      @media (pointer: coarse) {
-        #background-video {
-          display: none;
-        }
-      }
-      
       body {
         font-family: "Exo 2", sans-serif;
+        overflow: hidden; /* Hide scrollbars */
       }
 
       .main-text {
         font-family: "Space Mono", monospace;
-      }
-
-      /* Dark Gradient Background */
-      .gradient-bg {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        color: white; /* Ensures text is readable */
       }
 
       /* Dark Container Styling */
@@ -140,45 +118,111 @@
       .fade-in {
         animation: fadeIn 1s ease-out;
       }
+
+      /* Video Background Styling */
+      #background-video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+      }
+
+      @media (pointer: coarse) {
+        #background-video {
+          display: none;
+        }
+      }
+
+      /* Description Text Styling */
+      .description-text {
+        font-size: 18px; /* Adjust font size */
+        transition: color 0.5s ease-in-out; /* Transition for smooth effect */
+      }
+
+      .description-text:hover {
+        background: linear-gradient(
+          to right,
+          #7a3be0,
+          #a55eea
+        ); /* Gradient colors */
+        background-clip: text; /* Clip background to text */
+        -webkit-background-clip: text; /* For Safari compatibility */
+        color: transparent; /* Make text transparent to show gradient */
+        text-shadow: none; /* Remove any existing text shadow */
+      }
+      .tas-title {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.7); /* Glow effect */
+      }
     </style>
   </head>
 
-  <body class="gradient-bg flex items-center justify-center min-h-screen">
-
+  <body>
+    <!-- Video Background -->
     <video autoplay loop muted id="background-video">
       <source src="./background.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
     </video>
-    <!-- Dark Container -->
-    <div
-      class="dark-container p-8 rounded-lg shadow-lg w-full max-w-md text-center fade-in"
-    >
-      <!-- Logo or Brand Name -->
-      <div style="display: flex; justify-content: center; align-items: center">
-        <h1
-          class="text-3xl font-bold mb-4 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent glow-on-hover"
-          style="border-radius: 5px; padding: 5px"
+
+    <div class="flex items-center justify-center min-h-screen">
+      <!-- Dark Container -->
+      <div
+        class="dark-container p-16 rounded-lg shadow-lg w-full max-w-2xl text-center fade-in"
+      >
+        <!-- Logo or Brand Name -->
+        <div
+          style="display: flex; justify-content: center; align-items: center"
         >
-          TAS
-        </h1>
-        <img src="./motion.gif" alt="tas_loading" style="width: 100px" />
+          <h1
+            class="tas-title text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
+            style="border-radius: 5px; padding: 5px"
+          >
+            TAS
+          </h1>
+          <img
+            src="./motion.gif"
+            alt="tas_loading"
+            class="stickman-gif"
+            style="width: 150px"
+          />
+        </div>
+
+        <!-- Description -->
+        <p class="description-text text-lg text-gray-300 mb-8 main-text">
+          <!-- Wrap each word or letter in a span for hover effect -->
+          <span>T</span><span>A</span><span>S</span> is an <span>i</span
+          ><span>n</span><span>n</span><span>o</span><span>v</span><span>a</span
+          ><span>t</span><span>i</span><span>v</span><span>e</span>,
+          <span>A</span><span>I</span>-<span>d</span><span>r</span><span>i</span
+          ><span>v</span><span>e</span><span>n</span> app <span>d</span
+          ><span>e</span><span>s</span><span>i</span><span>g</span><span>n</span
+          ><span>e</span><span>d</span> to <span>h</span><span>e</span
+          ><span>l</span><span>p</span> students make <span>i</span
+          ><span>m</span><span>p</span><span>o</span><span>r</span><span>t</span
+          ><span>a</span><span>n</span><span>t</span> <span>d</span
+          ><span>e</span><span>c</span><span>i</span><span>s</span><span>i</span
+          ><span>o</span><span>n</span><span>s</span>
+          more easily. Whether you’re planning your budget, looking for extra
+          <span>i</span><span>n</span><span>c</span><span>o</span><span>m</span
+          ><span>e</span>, learning a new <span>s</span><span>k</span
+          ><span>i</span><span>l</span><span>l</span>, or connecting with
+          <span>o</span><span>t</span><span>h</span><span>e</span><span>r</span
+          ><span>s</span>—TAS is here for you! Get clear, useful advice, discuss
+          insights with other users, and skip the hassle of endless searching.
+          Take charge of your future—join TAS today.
+        </p>
+
+        <!-- Privacy Assurance -->
+        <p class="text-base text-gray-400 mt-6">
+          We respect your privacy.<br />We will only use Your information to
+          measure<br />overall interest in the TAS app.
+        </p>
       </div>
-
-      <!-- Description -->
-      <p class="text-sm text-gray-300 mb-6 main-text">
-       TAS is an innovative, AI-driven app designed to help
-      students make important decisions more easily.
-      Whether you’re planning your budget, looking for extra income,
-      learning a new skill, or connecting with others—TAS is here for you!
-      Get clear, useful advice, discuss insights with other users,
-      and skip the hassle of endless searching.
-      Take charge of your future—join TAS today
-      </p>
-
-      <!-- Privacy Assurance -->
-      <p class="text-xs text-gray-400 mt-4">
-        We respect your privacy.<br/>We will only use Your information to measure<br/>overall interest in the TAS app.
-      </p>
     </div>
   </body>
 </html>
