@@ -1,215 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script async src="https://tally.so/widgets/embed.js"></script>
-
-    <script>
-      // Dynamically adjust popup dimensions based on screen size
-      const isMobile = window.innerWidth <= 768; // Check if the device is mobile
-      window.TallyConfig = {
-        formId: "3jz5AJ",
-        popup: {
-          width: isMobile ? "90%" : "360px", // Adjust width for mobile and desktop
-          height: isMobile ? "80%" : "auto", // Adjust height for mobile
-          emoji: {
-            text: "👋",
-            animation: "wave",
-          },
-          layout: "modal",
-          doNotShowAfterSubmit: false,
-        },
-      };
-    </script>
-
-    <!-- Primary Meta Tags -->
-    <title>T A S _</title>
-    <meta name="title" content="T A S _ " />
-    <meta
-      name="description"
-      content="TAS is an innovative, AI-driven, student-friendly app designed to help you make important decisions easier. Signup for TAS latest news and be one of the first to know about TAS app launch! 🙂"
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tally.so/r/3jz5AJ" />
-    <meta property="og:title" content="T A S _ " />
-    <meta
-      property="og:description"
-      content="TAS is an innovative, AI-driven, student-friendly app designed to help you make important decisions easier. Signup for TAS latest news and be one of the first to know about TAS app launch! 🙂"
-    />
-    <meta
-      property="og:image"
-      content="https://metatags.io/images/meta-tags.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://tally.so/r/3jz5AJ" />
-    <meta property="twitter:title" content="T A S _ " />
-    <meta
-      property="twitter:description"
-      content="TAS is an innovative, AI-driven, student-friendly app designed to help you make important decisions easier. Signup for TAS latest news and be one of the first to know about TAS app launch! 🙂"
-    />
-    <meta
-      property="twitter:image"
-      content="https://metatags.io/images/meta-tags.png"
-    />
-
-    <!-- Meta Tags Generated with https://metatags.io -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TAS | LAUNCH</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./icon.png" />
-    <!-- Tailwind CSS CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Import Exo 2 Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Custom Styles -->
-    <style>
-      body {
-        font-family: "Exo 2", sans-serif;
-        overflow: hidden; /* Hide scrollbars */
-      }
-
-      .main-text {
-        font-family: "Space Mono", monospace;
-      }
-
-      /* Dark Container Styling */
-      .dark-container {
-        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-        color: white; /* Ensures text inside is readable */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adds depth */
-      }
-
-      .glow-on-hover {
-        transition: box-shadow 0.3s ease;
-      }
-
-      .glow-on-hover:hover {
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.7);
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .fade-in {
-        animation: fadeIn 1s ease-out;
-      }
-
-      /* Video Background Styling */
-      #background-video {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -100;
-        transform: translateX(-50%) translateY(-50%);
-        object-fit: cover;
-      }
-
-      @media (pointer: coarse) {
-        #background-video {
-          display: none;
-        }
-      }
-
-      /* Description Text Styling */
-      .description-text {
-        font-size: 18px; /* Adjust font size */
-        transition: color 0.5s ease-in-out; /* Transition for smooth effect */
-      }
-
-      .description-text:hover {
-        background: linear-gradient(
-          to right,
-          #7a3be0,
-          #a55eea
-        ); /* Gradient colors */
-        background-clip: text; /* Clip background to text */
-        -webkit-background-clip: text; /* For Safari compatibility */
-        color: transparent; /* Make text transparent to show gradient */
-        text-shadow: none; /* Remove any existing text shadow */
-      }
-      .tas-title {
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.7); /* Glow effect */
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Video Background -->
-    <video autoplay loop muted id="background-video">
-      <source src="./background.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
-
-    <div class="flex items-center justify-center min-h-screen p-4">
-      <!-- Dark Container -->
-      <div
-        class="dark-container p-8 rounded-lg shadow-lg w-full max-w-2xl text-center fade-in"
-      >
-        <!-- Logo or Brand Name -->
-        <div
-          style="display: flex; justify-content: center; align-items: center"
-        >
-          <h1
-            class="tas-title text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
-            style="border-radius: 5px; padding: 5px"
-          >
-            TAS
-          </h1>
-          <img
-            src="./motion.gif"
-            alt="tas_loading"
-            class="stickman-gif"
-            style="width: 100px md:w-150px"
-          />
-        </div>
-
-        <!-- Description -->
-        <p
-          class="description-text text-md md:text-lg text-gray-300 mb-6 main-text"
-        >
-          TAS is a innovative, AI-driven app designed to help students make
-          important decisions more easily. Whether you’re planning your budget,
-          looking for extra income, learning a new skill, or connecting with
-          others—TAS is here for you! Get clear, useful advice, discuss insights
-          with other users, and skip the hassle of endless searching. Take
-          charge of your future—join TAS today.
-        </p>
-
-        <!-- Privacy Assurance -->
-        <p class="text-sm text-gray-400 mt-4">
-          We respect your privacy.<br />We will only use Your information to
-          measure<br />overall interest in the TAS app.
-        </p>
-      </div>
-    </div>
-  </body>
-</html>
+ <html lang="en">
+   <head>
+     <script async src="https://tally.so/widgets/embed.js"></script>
+ 
+     <script>
+       // Dynamically adjust popup dimensions based on screen size
+       const isMobile = window.innerWidth <= 768; // Check if the device is mobile
+       window.TallyConfig = {
+         formId: "3jz5AJ",
+         popup: {
+           width: isMobile ? "90%" : "360px", // Adjust width for mobile and desktop
+           height: isMobile ? "80%" : "auto", // Adjust height for mobile
+           emoji: {
+             text: "👋",
+             animation: "wave",
+           },
+           layout: "modal",
+           doNotShowAfterSubmit: false,
+         },
+       };
+     </script>
+ 
+     <!-- Primary Meta Tags -->
+     <title>T A S _</title>
+     <meta name="title" content="T A S _ " />
+     <meta
+       name="description"
+       content="TAS is an innovative, AI-driven, student-friendly app designed to help you make important decisions easier. Signup for TAS latest news and be one of the first to know about TAS app launch! 🙂"
+     />
+ 
+     <!-- Open Graph / Facebook -->
+     <meta property="og:type" content="website" />
+     <meta property="og:url" content="https://tally.so/r/3jz5AJ" />
+     <meta property="og:title" content="T A S _ " />
+     <meta
+       property="og:description"
+       content="TAS is an innovative, AI-driven, student-friendly app designed to help you make important decisions easier. Signup for TAS latest news and be one of the first to know about TAS app launch! 🙂"
+     />
+     <meta
+       property="og:image"
+       content="https://metatags.io/images/meta-tags.png"
+     />
+ 
+     <!-- Twitter -->
+     <meta property="twitter:card" content="summary_large_image" />
+     <meta property="twitter:url" content="https://tally.so/r/3jz5AJ" />
+     <meta property="twitter:title" content="T A S _ " />
+     <meta
+       property="twitter:description"
+       content="TAS is an innovative, AI-driven, student-friendly app designed to help you make important decisions easier. Signup for TAS latest news and be one of the first to know about TAS app launch! 🙂"
+     />
+     <meta
+       property="twitter:image"
+       content="https://metatags.io/images/meta-tags.png"
+     />
+ 
+     <!-- Meta Tags Generated with https://metatags.io -->
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>TAS | LAUNCH</title>
+ 
+     <link rel="icon" type="image/png" sizes="32x32" href="./icon.png" />
+     <!-- Tailwind CSS CDN -->
+     <link
+       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+       rel="stylesheet"
+     />
+ 
+     <!-- Import Exo 2 Font -->
+     <link
+       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap"
+       rel="stylesheet"
+     />
+ 
+     <link
+       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+       rel="stylesheet"
+     />
+ 
+     <!-- Custom Styles -->
+     <style>
+       body {
+         font-family: "Exo 2", sans-serif;
+         overflow: hidden; /* Hide scrollbars */
+       }
+ 
+       .main-text {
+         font-family: "Space Mono", monospace;
+       }
+ 
+       /* Dark Container Styling */
+       .dark-container {
+         background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+         color: white; /* Ensures text inside is readable */
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adds depth */
+       }
+ 
+       .glow-on-hover {
+         transition: box-shadow 0.3s ease;
+       }
+ 
+       .glow-on-hover:hover {
+         box-shadow: 0 0 20px rgba(102, 126, 234, 0.7);
+       }
+ 
+       @keyframes fadeIn {
+         from {
+           opacity: 0;
+           transform: translateY(20px);
+         }
+         to {
+           opacity: 1;
+           transform: translateY(0);
+         }
+       }
+ 
+       .fade-in {
+         animation: fadeIn 1s ease-out;
+       }
+ 
+       /* Video Background Styling */
+       #background-video {
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         min-width: 100%;
+         min-height: 100%;
+         width: auto;
+         height: auto;
+         z-index: -100;
+         transform: translateX(-50%) translateY(-50%);
+         object-fit: cover;
+       }
+ 
+       @media (pointer: coarse) {
+         #background-video {
+           display: none;
+         }
+       }
+ 
+       /* Description Text Styling */
+       .description-text {
+         font-size: 18px; /* Adjust font size */
+         transition: color 0.5s ease-in-out; /* Transition for smooth effect */
+       }
+ 
+       .description-text:hover {
+         background: linear-gradient(
+           to right,
+           #7a3be0,
+           #a55eea
+         ); /* Gradient colors */
+         background-clip: text; /* Clip background to text */
+         -webkit-background-clip: text; /* For Safari compatibility */
+         color: transparent; /* Make text transparent to show gradient */
+         text-shadow: none; /* Remove any existing text shadow */
+       }
+       .tas-title {
+         box-shadow: 0 0 20px rgba(102, 126, 234, 0.7); /* Glow effect */
+       }
+     </style>
+   </head>
+ 
+   <body>
+     <!-- Video Background -->
+     <video autoplay loop muted id="background-video">
+       <source src="./background.mp4" type="video/mp4" />
+       Your browser does not support HTML5 video.
+     </video>
+ 
+     <div class="flex items-center justify-center min-h-screen">
+       <!-- Dark Container -->
+       <div
+         class="dark-container p-16 rounded-lg shadow-lg w-full max-w-2xl text-center fade-in"
+       >
+         <!-- Logo or Brand Name -->
+         <div
+           style="display: flex; justify-content: center; align-items: center"
+         >
+           <h1
+             class="tas-title text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
+             style="border-radius: 5px; padding: 5px"
+           >
+             TAS
+           </h1>
+           <img
+             src="./motion.gif"
+             alt="tas_loading"
+             class="stickman-gif"
+             style="width: 150px"
+           />
+         </div>
+ 
+         <!-- Description -->
+         <p class="description-text text-lg text-gray-300 mb-8 main-text">
+           <!-- Wrap each word or letter in a span for hover effect -->
+         TAS is your AI decision assistant built specifically for student life. 
+           Struggling with which classes to take? Wondering how to stretch your meal budget? 
+           Need to find a part-time job that fits your schedule? TAS gives you personalized recommendations in seconds, not hours.
+Unlike endless Google searches or conflicting advice from friends, 
+           TAS analyzes your unique situation and provides clear, actionable guidance. 
+           But that's not all—TAS creates a community where you can discuss AI-generated 
+           advice with peers, share insights, and refine solutions together.
+Set personal goals directly in the app, whether academic, financial, or career-focused, 
+           and let TAS help you track your progress over time. Join thousands of students
+           who use TAS to reduce stress, save time, and make confident decisions with accountability built in.
+Download TAS now and make your first smart decision today—it's free for students!
+         </p>
+ 
+         <!-- Privacy Assurance -->
+         <p class="text-base text-gray-400 mt-6">
+           We respect your privacy.<br />We will only use Your information to
+           measure<br />overall interest in the TAS app.
+         </p>
+       </div>
+     </div>
+   </body>
+ </html>
